@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="menu_services" model="ir.ui.view">
+            <field name="name">Services</field>
+        </record>
+    </data>
+</odoo>
