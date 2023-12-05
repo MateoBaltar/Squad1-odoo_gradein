@@ -7,5 +7,6 @@
     "application": True,
     "data": [
         'security/groups.xml',
+        'views/menu_services.xml'
     ]
 }
