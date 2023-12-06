@@ -7,6 +7,7 @@
     "application": True,
     "data": [
         'security/groups.xml',
+        'security/ir.model.access.csv',
         'views/menu_services.xml'
     ]
 }
