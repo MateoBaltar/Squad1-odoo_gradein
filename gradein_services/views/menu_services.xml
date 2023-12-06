@@ -28,28 +28,14 @@
         </record>
 
         <!-- Menú de Servicios --> 
-        <menuitem id="menu_services"
-            name="Services"
-            action="action_menu_services" />
-
-        <!--<record id="menu_services" model="ir.ui.menu">
-            <field name="name">Services</field>
-            <field name="sequence" eval="10" />
-        </record> -->
-
+        <menuitem id="menu_services" 
+            name="Services"/>
         
         <menuitem id="menu_services_config"
             name="Configuration"
             action="action_menu_services"
             parent="menu_services" 
             groups="group_admin"/>
-
-        <!-- <record id="menu_services_config" model="ir.ui.menu">
-            <field name="name">Configuration</field>
-            <field name="parent_id" ref="menu_services" />
-            <field name="action" ref="action_menu_services" />
-            <field name="groups" eval="[(4, ref('group_admin'))]" />
-        </record> -->
         
 
     </data>
