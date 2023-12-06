@@ -7,6 +7,5 @@ class GradeinQuestion(models.Model):
 
     name = fields.Char(string="Name")
     active = fields.Boolean(string="Active", default=True)
-    # Completar los modelos de answer y equipment y descomentar las siguientes lineas
-    # equipment_type_ids = fields.Many2many('gradein.equipment', string="Equipment Type")
-    # answer_ids = fields.Many2many('gradein.answer', string="Answers")
+    equipment_type_ids = fields.Many2many('gradein.equipment', string="Equipment Type")
+    answer_ids = fields.Many2many('gradein.answer', string="Answers")
