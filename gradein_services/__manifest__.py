@@ -7,5 +7,6 @@
     "application": True,
     "data": [
         'security/groups.xml',
+        'views/gradein_answer_view.xml',
     ]
 }
