@@ -7,6 +7,7 @@
     "application": True,
     "data": [
         'security/groups.xml',
-        'views/gradein_answer_view.xml',
+        'security/ir.model.access.csv',
+        'views/menu_services.xml'
     ]
 }
