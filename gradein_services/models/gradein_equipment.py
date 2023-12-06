@@ -6,7 +6,7 @@ class GradeInEquipment(models.Model):
     _description = 'Gradein Equipment'
 
     name = fields.Char(string="Name")
-    image = fields.Image(string="Imagen")
-    description = fields.Text(string="Descripción")
-    active = fields.Boolean(string="Activo", default=True)
-    price = fields.Float(string="Precio")
+    image = fields.Image(string="Image")
+    description = fields.Text(string="Description")
+    active = fields.Boolean(string="Active", default=True)
+    price = fields.Float(string="Price")
