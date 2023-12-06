@@ -1,0 +1,29 @@
+<odoo>
+    <record id="view_gradein_answer_form" model="ir.ui.view">
+        <field name="name">gradein.answer.form</field>
+        <field name="model">gradein.answer</field>
+        <field name="arch" type="xml">
+            <form string="Gradein Answer">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="price_reduction"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_gradein_answer_tree" model="ir.ui.view">
+        <field name="name">gradein.answer.tree</field>
+        <field name="model">gradein.answer</field>
+        <field name="arch" type="xml">
+            <tree string="Gradein Answer">
+                <field name="name"/>
+                <field name="active"/>
+                <field name="price_reduction"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
