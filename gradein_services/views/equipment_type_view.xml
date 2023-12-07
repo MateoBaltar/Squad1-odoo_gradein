@@ -5,7 +5,7 @@
         <!-- TREE -->
         <record id="view_equipment_type_tree" model="ir.ui.view">
             <field name="name">Gradein Equipment Types</field>
-            <field name="model">vgradein.equipment.type</field>
+            <field name="model">gradein.equipment.type</field>
             <field name="arch" type="xml">
                 <tree>
                     <!-- Campo "Nombre" -->
