@@ -29,7 +29,7 @@
             <field name="name">Gradein Answers</field>
             <field name="res_model">gradein.answer</field>
             <field name="view_mode">form</field>
-            <field name="view_id" ref="view_gradein_answer_tree" />
+            <field name="view_id" ref="gradein_answer_view_form" />
         </record>
 
 
