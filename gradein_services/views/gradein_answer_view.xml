@@ -1,29 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_gradein_answer_form" model="ir.ui.view">
-        <field name="name">gradein.answer.form</field>
-        <field name="model">gradein.answer</field>
-        <field name="arch" type="xml">
-            <form string="Gradein Answer">
-                <sheet>
-                    <group>
-                        <field name="name"/>
-                        <field name="active"/>
-                        <field name="price_reduction"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+    <data>
 
-    <record id="view_gradein_answer_tree" model="ir.ui.view">
-        <field name="name">gradein.answer.tree</field>
-        <field name="model">gradein.answer</field>
-        <field name="arch" type="xml">
-            <tree string="Gradein Answer">
-                <field name="name"/>
-                <field name="active"/>
-                <field name="price_reduction"/>
-            </tree>
-        </field>
-    </record>
+        <!-- FORM -->
+        <record id="gradein_answer_view_form" model="ir.ui.view">
+            <field name="name">gradein.answer.form</field>
+            <field name="model">gradein.answer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <!-- Campo "Name" -->
+                    <group>
+                        <field name="name" string="Name" />
+                    </group>
+
+                    <!-- Campo "price_reduction" -->
+                    <group>
+                        <field name="price_reduction" string="Reduce the price by"/>
+                    </group>
+ 
+                </form>
+            </field>
+        </record>
+  
+            
+
+        <!-- ACTION -->
+        <record id="gradein_answer_view" model="ir.actions.act_window">
+            <field name="name">Gradein Answers</field>
+            <field name="res_model">gradein.answer</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_gradein_answer_tree" />
+        </record>
+
+
+        <!-- MENU -->
+        <menuitem id="menu_gradein_answer"
+            name="Answers"
+            action="gradein_answer_view"
+            parent="menu_services_config"
+            groups="group_admin"/>
+
+    </data>
 </odoo>
