@@ -12,5 +12,6 @@
         'views/menu_services.xml',
         'views/gradein_question_view.xml',
         'views/equipment_type_view.xml',
+        'views/gradein_order_view.xml',
     ]
 }
