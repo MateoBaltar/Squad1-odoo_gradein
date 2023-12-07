@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- TREE -->
+        <record id="view_gradein_order_tree" model="ir.ui.view">
+            <field name="name">gradein.order.tree</field>
+            <field name="model">gradein.order</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Campo "Nombre" -->
+                    <field name="name" />
+                    <!-- Campo "Fecha" -->
+                    <field name="date" />
+                    <!-- Campo "Estado" -->
+                    <field name="state" />
+                    <!-- Campo "Equipo" -->
+                    <field name="equipment_id" />
+                    <!-- Campo "IMEI" -->
+                    <field name="imei" />
+                    <!-- Campo "Cliente" -->
+                    <field name="partner_id" />
+                    <!-- Campo "Motivo de Rechazo" -->
+                    <field name="reject_motive_id" />
+                    <!-- Campo "Importe a pagar" -->
+                    <field name="price" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="gradein_order_view" model="ir.actions.act_window">
+            <field name="name">Gradein Order</field>
+            <field name="res_model">gradein.order</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_gradein_order_tree" />
+        </record>
+
+    </data>
+</odoo>
