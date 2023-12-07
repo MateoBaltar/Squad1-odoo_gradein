@@ -18,15 +18,15 @@
                         <field name="active" />
                     </group>
 
-                    <!-- Campo "Tipos de equipos"
+                    <!-- Campo "Tipos de equipos" -->
                     <group>
                         <field name="equipment_type_ids" />
-                    </group> -->
+                    </group>
 
-                    <!-- Campo "Respuestas posibles"
+                    <!-- Campo "Respuestas posibles" -->
                     <group>
                         <field name="answer_ids" widget="many2many_tags" />
-                    </group> -->
+                    </group> 
 
                 </form>
             </field>
@@ -41,8 +41,8 @@
                     <!-- Campo "Nombre" -->
                     <field name="name" />
 
-                    <!-- Campo "Tipos de equipos"
-                    <field name="equipment_type_ids" /> -->
+                    <!-- Campo "Tipos de equipos" -->
+                    <field name="equipment_type_ids" />
 
                 </tree>
             </field>
@@ -57,9 +57,9 @@
                     <!-- Filtro rápido "Nombre" -->
                     <field name="name" />
 
-                    <!-- Filtro rápido "Tipos de equipos"
+                    <!-- Filtro rápido "Tipos de equipos"-->
                     <field name="equipment_type_ids" string="Tipos de equipos"
-                        filter_domain="[('equipment_type_ids', 'ilike', self)]" /> -->
+                        filter_domain="[('equipment_type_ids', 'ilike', self)]" />
 
                     <field name="active" />
                     <!-- Filtro predefinido "Archivadas" -->
@@ -67,6 +67,7 @@
                 </search>
             </field>
         </record>
+
 
         <!-- ACTION -->
         <record id="gradein_question_view" model="ir.actions.act_window">
@@ -78,11 +79,13 @@
 
 
         <!-- MENU -->
-        <record id="menu_gradein_question" model="ir.ui.menu">
-            <field name="name">Questions</field>
-            <field name="parent_id" ref="menu_services_config" />
-            <field name="action" ref="gradein_question_view" />
-        </record>
+        <menuitem id="menu_gradein_question"
+            name="Questions"
+            parent="menu_services_config"
+            action="gradein_question_view"
+            groups="group_admin" />
+
+
 
     </data>
 </odoo>
