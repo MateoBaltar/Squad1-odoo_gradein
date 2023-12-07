@@ -12,6 +12,10 @@
                     <group>
                         <field name="name" string="Name" />
                     </group>
+                    <!-- Campo "Activa" -->
+                    <group>
+                        <field name="active" />
+                    </group>
 
                     <!-- Campo "price_reduction" -->
                     <group>
@@ -25,12 +29,14 @@
             
 
         <!-- ACTION -->
-        <record id="gradein_answer_view" model="ir.actions.act_window">
+          <record id="gradein_answer_view" model="ir.actions.act_window">
             <field name="name">Gradein Answers</field>
             <field name="res_model">gradein.answer</field>
             <field name="view_mode">form</field>
-            <field name="view_id" ref="view_gradein_answer_tree" />
+            <field name="view_id" ref="gradein_answer_view_form" />
         </record>
+
+
 
 
         <!-- MENU -->

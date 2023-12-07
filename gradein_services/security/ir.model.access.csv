@@ -1,3 +1,5 @@
 "id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
 "access_seller","odoo.gradein.vendedor","model_gradein_question","group_seller",1,1,1,0
 "access_admin","odoo.gradein.admin","model_gradein_question","group_admin",1,1,1,1
+"access_seller_answer","odoo.gradein.vendedor.answer","model_gradein_answer","group_seller",1,1,1,0
+"access_admin_answer","odoo.gradein.admin.answer","model_gradein_answer","group_admin",1,1,1,1
