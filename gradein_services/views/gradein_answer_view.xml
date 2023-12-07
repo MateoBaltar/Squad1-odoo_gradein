@@ -1,29 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_gradein_answer_form" model="ir.ui.view">
-        <field name="name">gradein.answer.form</field>
-        <field name="model">gradein.answer</field>
-        <field name="arch" type="xml">
-            <form string="Gradein Answer">
-                <sheet>
-                    <group>
-                        <field name="name"/>
-                        <field name="active"/>
-                        <field name="price_reduction"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+    <data>
 
-    <record id="view_gradein_answer_tree" model="ir.ui.view">
-        <field name="name">gradein.answer.tree</field>
-        <field name="model">gradein.answer</field>
-        <field name="arch" type="xml">
-            <tree string="Gradein Answer">
-                <field name="name"/>
-                <field name="active"/>
-                <field name="price_reduction"/>
-            </tree>
-        </field>
-    </record>
+        <!-- FORM -->
+        <record id="gradein_answer_view_form" model="ir.ui.view">
+            <field name="name">gradein.answer.form</field>
+            <field name="model">gradein.answer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <!-- Campo "Nombre" -->
+                    <group>
+                        <field name="name" />
+                    </group>
+
+                    <!-- Campo "Activa" -->
+                    <group>
+                        <field name="active" />
+                    </group>
+
+                    <!-- Campo "Tipos de equipos"
+                    <group>
+                        <field name="equipment_type_ids" />
+                    </group> -->
+
+                    <!-- Campo "Respuestas posibles"
+                    <group>
+                        <field name="answer_ids" widget="many2many_tags" />
+                    </group> -->
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE -->
+        <record id="view_gradein_answer_tree" model="ir.ui.view">
+            <field name="name">Gradein Answer</field>
+            <field name="model">gradein.answer</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Campo "Nombre" -->
+                    <field name="name" />
+
+                    <!-- Campo "Tipos de equipos"
+                    <field name="equipment_type_ids" /> -->
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- SEARCH -->
+        <record id="view_gradein_answer_search" model="ir.ui.view">
+            <field name="name">gradein.answer.search</field>
+            <field name="model">gradein.answer</field>
+            <field name="arch" type="xml">
+                <search>
+                    <!-- Filtro rápido "Nombre" -->
+                    <field name="name" />
+
+                    <!-- Filtro rápido "Tipos de equipos"
+                    <field name="equipment_type_ids" string="Tipos de equipos"
+                        filter_domain="[('equipment_type_ids', 'ilike', self)]" /> -->
+
+                    <field name="active" />
+                    <!-- Filtro predefinido "Archivadas" -->
+                    <filter string="Archived" name="active" domain="[('active', '=', False)]" />
+                </search>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="gradein_answer_view" model="ir.actions.act_window">
+            <field name="name">Gradein Answers</field>
+            <field name="res_model">gradein.answer</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="view_id" ref="view_gradein_answer_tree" />
+        </record>
+
+
+        <!-- MENU -->
+        <menuitem id="menu_gradein_answer"
+            name="Answers"
+            action="gradein_answer_view"
+            parent="menu_services_config"
+            groups="group_admin"/>
+
+    </data>
 </odoo>
