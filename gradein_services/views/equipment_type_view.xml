@@ -2,6 +2,18 @@
 <odoo>
     <data>
 
+        <!-- TREE -->
+        <record id="view_equipment_type_tree" model="ir.ui.view">
+            <field name="name">Gradein Equipment Types</field>
+            <field name="model">vgradein.equipment.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Campo "Nombre" -->
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
         <!-- ACTION -->
         <record id="equipment_type_view" model="ir.actions.act_window">
             <field name="name">Equipment Types</field>
