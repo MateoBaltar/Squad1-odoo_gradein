@@ -26,17 +26,28 @@
             </field>
         </record>
   
-            
+        <!-- TREE -->
+        <record id="gradein_answer_view_tree" model="ir.ui.view">
+            <field name="name">Gradein Answer</field>
+            <field name="model">gradein.answer</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Campo "Nombre" -->
+                    <field name="name" />
+                    <!-- Campo "price_reduction" -->
+                    <field name="price_reduction" string="Reduce the price by"/>
+                </tree>
+            </field>
+        </record>
 
         <!-- ACTION -->
           <record id="gradein_answer_view" model="ir.actions.act_window">
             <field name="name">Gradein Answers</field>
             <field name="res_model">gradein.answer</field>
-            <field name="view_mode">form</field>
-            <field name="view_id" ref="gradein_answer_view_form" />
+            <field name="view_mode">form,tree</field>
+            <field name="view_id" ref="gradein_answer_view_tree" />
         </record>
-
-
+            
 
 
         <!-- MENU -->
