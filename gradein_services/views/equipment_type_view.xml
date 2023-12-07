@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ACTION -->
+        <record id="equipment_type_view" model="ir.actions.act_window">
+            <field name="name">Equipment Types</field>
+            <field name="res_model">gradein.equipment.type</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_equipment_type_tree" />
+        </record>
+
+
+        <!-- MENU -->
+        <menuitem id="menu_equipment_type"
+            name="Equipment Types"
+            parent="menu_services_config"
+            action="equipment_type_view"
+            groups="group_admin" />
+            
+    </data>
+</odoo>
