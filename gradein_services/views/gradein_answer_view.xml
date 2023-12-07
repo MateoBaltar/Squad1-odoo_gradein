@@ -8,71 +8,27 @@
             <field name="model">gradein.answer</field>
             <field name="arch" type="xml">
                 <form>
-                    <!-- Campo "Nombre" -->
+                    <!-- Campo "Name" -->
                     <group>
-                        <field name="name" />
+                        <field name="name" string="Name" />
                     </group>
 
-                    <!-- Campo "Activa" -->
+                    <!-- Campo "price_reduction" -->
                     <group>
-                        <field name="active" />
+                        <field name="price_reduction" string="Reduce the price by"/>
                     </group>
-
-                    <!-- Campo "Tipos de equipos"
-                    <group>
-                        <field name="equipment_type_ids" />
-                    </group> -->
-
-                    <!-- Campo "Respuestas posibles"
-                    <group>
-                        <field name="answer_ids" widget="many2many_tags" />
-                    </group> -->
-
+ 
                 </form>
             </field>
         </record>
-
-        <!-- TREE -->
-        <record id="view_gradein_answer_tree" model="ir.ui.view">
-            <field name="name">Gradein Answer</field>
-            <field name="model">gradein.answer</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <!-- Campo "Nombre" -->
-                    <field name="name" />
-
-                    <!-- Campo "Tipos de equipos"
-                    <field name="equipment_type_ids" /> -->
-
-                </tree>
-            </field>
-        </record>
-
-        <!-- SEARCH -->
-        <record id="view_gradein_answer_search" model="ir.ui.view">
-            <field name="name">gradein.answer.search</field>
-            <field name="model">gradein.answer</field>
-            <field name="arch" type="xml">
-                <search>
-                    <!-- Filtro rápido "Nombre" -->
-                    <field name="name" />
-
-                    <!-- Filtro rápido "Tipos de equipos"
-                    <field name="equipment_type_ids" string="Tipos de equipos"
-                        filter_domain="[('equipment_type_ids', 'ilike', self)]" /> -->
-
-                    <field name="active" />
-                    <!-- Filtro predefinido "Archivadas" -->
-                    <filter string="Archived" name="active" domain="[('active', '=', False)]" />
-                </search>
-            </field>
-        </record>
+  
+            
 
         <!-- ACTION -->
         <record id="gradein_answer_view" model="ir.actions.act_window">
             <field name="name">Gradein Answers</field>
             <field name="res_model">gradein.answer</field>
-            <field name="view_mode">tree,form,search</field>
+            <field name="view_mode">form</field>
             <field name="view_id" ref="view_gradein_answer_tree" />
         </record>
 
