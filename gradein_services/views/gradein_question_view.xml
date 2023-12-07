@@ -57,10 +57,6 @@
                     <!-- Filtro rápido "Nombre" -->
                     <field name="name" />
 
-                    <!-- Filtro rápido "Tipos de equipos"-->
-                    <field name="equipment_type_ids" string="Tipos de equipos"
-                        filter_domain="[('equipment_type_ids', 'ilike', self)]" />
-
                     <field name="active" />
                     <!-- Filtro predefinido "Archivadas" -->
                     <filter string="Archived" name="active" domain="[('active', '=', False)]" />
