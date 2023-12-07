@@ -5,3 +5,5 @@
 "access_admin_answer","odoo.gradein.admin.answer","model_gradein_answer","group_admin",1,1,1,1
 "access_seller_equipment_type","odoo.gradein.equipment.seller","model_gradein_equipment_type","group_seller",1,1,1,0
 "access_admin_equipment_type","odoo.gradein.equipment.admin","model_gradein_equipment_type","group_admin",1,1,1,1
+"access_seller_order","odoo.gradein.order.seller","model_gradein_order","group_seller",1,1,1,0
+"access_admin_order","odoo.gradein.order.admin","model_gradein_order","group_admin",1,1,1,1
