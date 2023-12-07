@@ -39,12 +39,29 @@
                 </tree>
             </field>
         </record>
+        
+        <!-- SEARCH -->
+        <record id="view_gradein_answer_search" model="ir.ui.view">
+            <field name="name">gradein.answer.search</field>
+            <field name="model">gradein.answer</field>
+            <field name="arch" type="xml">
+                <search>
+                 <!-- Filtro rápido "Nombre" -->
+                 <field name="name"/>
+
+          
+                 <!-- Filtro predefinido "Archivadas" -->
+                <filter string="Archived" name="active" domain="[('active', '=', False)]" />
+                </search>
+            </field>
+        </record>
+
 
         <!-- ACTION -->
           <record id="gradein_answer_view" model="ir.actions.act_window">
             <field name="name">Gradein Answers</field>
             <field name="res_model">gradein.answer</field>
-            <field name="view_mode">form,tree</field>
+            <field name="view_mode">form,tree,search</field>
             <field name="view_id" ref="gradein_answer_view_tree" />
         </record>
             
