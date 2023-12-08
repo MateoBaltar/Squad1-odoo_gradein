@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        
-        <!-- TREE -->
-        <record id="view_gradein_question_tree" model="ir.ui.view">
-            <field name="name">Gradein Question</field>
-            <field name="model">gradein.question</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <!-- Campo "Nombre" -->
-                    <field name="name" />
-
-                    <!-- Campo "Activo" -->
-                    <field name="active" />
-
-                    <!-- Agregar más campos según sea necesario -->
-                </tree>
-            </field>
-        </record>
 
         <!-- ACTION -->
         <record id="action_menu_services" model="ir.actions.act_window">
             <field name="name">Menu Services</field>
-            <field name="res_model">gradein.question</field>
+            <field name="res_model">gradein.order</field>
             <field name="view_mode">tree</field>
-            <field name="view_id" ref="view_gradein_question_tree" />
+            <field name="view_id" ref="view_gradein_order_tree" />
         </record>
 
         <!-- Menú de Servicios -->
