@@ -106,7 +106,7 @@
         <record id="gradein_order_view" model="ir.actions.act_window">
             <field name="name">Gradein Order</field>
             <field name="res_model">gradein.order</field>
-            <field name="view_mode">tree</field>
+            <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_gradein_order_tree" />
         </record>
 
