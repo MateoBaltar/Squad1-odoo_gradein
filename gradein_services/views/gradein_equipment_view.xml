@@ -8,9 +8,32 @@
             <field name="model">gradein.equipment</field>
             <field name="arch" type="xml">
                 <tree>
-                    <!-- Campo "Nombre" -->
+
                     <field name="name" />
+
+                    <field name="description" />
+
+                    <field name="price" />
+
                 </tree>
+            </field>
+        </record>
+
+        <!-- SEARCH -->
+        <record id="view_gradein_equipment_search" model="ir.ui.view">
+            <field name="name">gradein.equipment.search</field>
+            <field name="model">gradein.equipment</field>
+            <field name="arch" type="xml">
+                <search>
+
+                    <field name="name" />
+
+                    <field name="description" />
+
+                    <field name="active" />
+
+                    <filter string="Archived" name="active" domain="[('active', '=', False)]" />
+                </search>
             </field>
         </record>
 
@@ -18,7 +41,7 @@
         <record id="gradein_equipment_view" model="ir.actions.act_window">
             <field name="name">Equipment</field>
             <field name="res_model">gradein.equipment</field>
-            <field name="view_mode">tree</field>
+            <field name="view_mode">tree,search</field>
             <field name="view_id" ref="view_gradein_equipment_tree" />
         </record>
 
