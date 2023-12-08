@@ -2,6 +2,34 @@
 <odoo>
     <data>
 
+        <!-- FORM -->
+        <record id="gradein_equipment_view_form" model="ir.ui.view">
+            <field name="name">gradein.equipment.form</field>
+            <field name="model">gradein.equipment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <!-- Campo "Imagen" -->
+                            <field name="image" />
+                            <!-- Campo "Nombre" -->
+                            <field name="name" />
+                            <!-- Campo "Activa" -->
+                            <field name="active" />
+                            <!-- Campo "Price" -->
+                            <field name="price" />
+                        </group>
+
+                        <!-- Campo "Description" -->
+                        <group>
+                            <field name="description" />
+                        </group>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
         <!-- TREE -->
         <record id="view_gradein_equipment_tree" model="ir.ui.view">
             <field name="name">Gradein Equipment</field>
@@ -41,7 +69,7 @@
         <record id="gradein_equipment_view" model="ir.actions.act_window">
             <field name="name">Equipment</field>
             <field name="res_model">gradein.equipment</field>
-            <field name="view_mode">tree,search</field>
+            <field name="view_mode">tree,search,form</field>
             <field name="view_id" ref="view_gradein_equipment_tree" />
         </record>
 
@@ -51,6 +79,6 @@
             parent="menu_services_config"
             action="gradein_equipment_view"
             groups="group_admin" />
-            
+
     </data>
 </odoo>
