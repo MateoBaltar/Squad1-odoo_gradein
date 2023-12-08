@@ -28,6 +28,8 @@
 
                     <field name="name" />
 
+                    <field name="description" />
+
                     <field name="active" />
 
                     <filter string="Archived" name="active" domain="[('active', '=', False)]" />
