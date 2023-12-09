@@ -9,9 +9,15 @@
             <field name="arch" type="xml">
                 <form>
 
-                    <field name="name" />
+                    <group>
+                        <group>
 
-                    <field name="active" />
+                            <field name="name" />
+
+                            <field name="active" />
+
+                        </group>
+                    </group>
 
                 </form>
             </field>
