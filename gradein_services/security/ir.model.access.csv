@@ -9,3 +9,5 @@
 "access_admin_order","odoo.gradein.order.admin","model_gradein_order","group_admin",1,1,1,1
 "access_seller_equipment","odoo.gradein.equipment.seller","model_gradein_equipment","group_seller",1,1,1,0
 "access_admin_equipment","odoo.gradein.equipment.admin","model_gradein_equipment","group_admin",1,1,1,1
+"access_seller_reject_motive","odoo.gradein.reject.seller","model_gradein_reject_motive","group_seller",1,1,1,0
+"access_admin_reject_motive","odoo.gradein.reject.admin","model_gradein_reject_motive","group_admin",1,1,1,1
