@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
+        <!-- FORM -->
+        <record id="reject_motive_view_form" model="ir.ui.view">
+            <field name="name">reject.motive.form</field>
+            <field name="model">gradein.reject.motive</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <field name="name" />
+
+                    <field name="active" />
+
+                </form>
+            </field>
+        </record>
+        
         <!--TREE-->
         <record id="gradein_reject_motive_view_tree" model="ir.ui.view">
             <field name="name">Gradein Reject Motive</field>
@@ -14,13 +30,27 @@
                     <field name="active" />
                 </tree>
             </field>
-      
         </record>
+
+        <!-- SEARCH -->
+        <record id="view_gradein_reject_motive_search" model="ir.ui.view">
+            <field name="name">gradein.reject.motive.search</field>
+            <field name="model">gradein.reject.motive</field>
+            <field name="arch" type="xml">
+                <search>
+
+                    <field name="name" />
+
+                    <filter string="Archived" name="active" domain="[('active', '=', False)]" />
+                </search>
+            </field>
+        </record>
+
         <!-- ACTION -->
         <record id="gradein_reject_motive_view" model="ir.actions.act_window">
             <field name="name">Gradein Reject Motives</field>
             <field name="res_model">gradein.reject.motive</field>
-            <field name="view_mode">tree</field>
+            <field name="view_mode">tree,form,search</field>
             <field name="view_id" ref="gradein_reject_motive_view_tree" />
         </record>
             
