@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--TREE-->
+        <record id="gradein_reject_motive_view_tree" model="ir.ui.view">
+            <field name="name">Gradein Reject Motive</field>
+            <field name="model">gradein.reject.motive</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Campo "Nombre" -->
+                    <field name="name" />
+
+                    <!-- Campo "Activa" -->
+                    <field name="active" />
+                </tree>
+            </field>
+      
+        </record>
+        <!-- ACTION -->
+        <record id="gradein_reject_motive_view" model="ir.actions.act_window">
+            <field name="name">Gradein Reject Motives</field>
+            <field name="res_model">gradein.reject.motive</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="gradein_reject_motive_view_tree" />
+        </record>
+            
+
+
+        <!-- MENU -->
+        <menuitem id="menu_gradein_reject_motive"
+            name="Reject Motive"
+            action="gradein_reject_motive_view"
+            parent="menu_services_config"
+            groups="group_admin"/>
+
+    </data>
+</odoo>
