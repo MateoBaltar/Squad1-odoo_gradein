@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+                <!-- FORM -->
+        <record id="gradein_order_view_form" model="ir.ui.view">
+            <field name="name">gradein.order.form</field>
+            <field name="model">gradein.order</field>
+            <field name="arch" type="xml">
+                <form>
+                    <!-- Campo "Nombre" -->
+                    <group>
+                        <field name="name" />
+                    </group>
+
+                    <!-- Campo "Fecha" -->
+                    <group>
+                        <field name="date" />
+                    </group>
+
+                    <!-- Campo "State" -->
+                    <group>
+                        <field name="state" />
+                    </group>
+
+                    <!-- Campo "Equipo" -->
+                    <group>
+                        <field name="equipment_id" />
+                    </group>
+
+                    <!-- Campo "Imei" -->
+                    <group>
+                        <field name="imei" />
+                    </group>
+
+                    <!-- Campo "Imagen" -->
+                    <group>
+                        <field name="image_ids" />
+                    </group>
+
+                    <!-- Campo "Cliente" -->
+                    <group>
+                        <field name="partner_id" />
+                    </group>
+
+                    <!-- Campo "Motivo de rechazo" -->
+                    <group>
+                        <field name="reject_motive_id" />
+                    </group>
+
+                    <!-- Campo "Importe a pagar" -->
+                    <group>
+                        <field name="price" />
+                    </group>
+
+                    <!-- Campo "Resumen de la evaluacion" -->
+                    <group>
+                        <field name="review" />
+                    </group>
+
+                    <!-- Campo "Respuestas" -->
+                    <!-- <group>
+                        <field name="answer_ids" />
+                    </group> -->
+
+                    <!-- Campo "Pregunta" -->
+                    <group>
+                        <field name="question_id" />
+                    </group>
+
+                    <!-- Campo "Respuesta dada" -->
+                    <group>
+                        <field name="answer_id" />
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE -->
+        <record id="view_gradein_order_tree" model="ir.ui.view">
+            <field name="name">gradein.order.tree</field>
+            <field name="model">gradein.order</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Campo "Nombre" -->
+                    <field name="name" />
+                    <!-- Campo "Fecha" -->
+                    <field name="date" />
+                    <!-- Campo "Estado" -->
+                    <field name="state" />
+                    <!-- Campo "Equipo" -->
+                    <field name="equipment_id" />
+                    <!-- Campo "IMEI" -->
+                    <field name="imei" />
+                    <!-- Campo "Cliente" -->
+                    <field name="partner_id" />
+                    <!-- Campo "Motivo de Rechazo" -->
+                    <field name="reject_motive_id" />
+                    <!-- Campo "Importe a pagar" -->
+                    <field name="price" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="gradein_order_view" model="ir.actions.act_window">
+            <field name="name">Gradein Order</field>
+            <field name="res_model">gradein.order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_gradein_order_tree" />
+        </record>
+
+        <menuitem id="menu_gradein_order"
+            name="Orders"
+            parent="menu_services"
+            action="gradein_order_view" />
+
+    </data>
+</odoo>
