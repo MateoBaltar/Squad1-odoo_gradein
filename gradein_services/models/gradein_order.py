@@ -8,11 +8,11 @@ class GradeinOrder(models.Model):
     date = fields.Date(string='Date')
     state = fields.Selection([('draft', 'Draft'), ('confirmed', 'Confirmed'), ('rejected', 'Rejected')],
                              string='Status', default='draft')
-    equipment_id = fields.Many2one('equipment.model', string='Equipment')
+    equipment_id = fields.Many2one('gradein.equipment', string='Equipment')
     imei = fields.Char(string='IMEI')
     image_ids = fields.Many2many('ir.attachment', string='Images')
     partner_id = fields.Many2one('res.partner', string='Client')
-    reject_motive_id = fields.Many2one('reject.motive', string='Reason for rejection')
+    reject_motive_id = fields.Many2one('gradein.reject.motive', string='Reason for rejection')
     price = fields.Float(string='Amount to pay')
     review = fields.Text(string='Evaluation Summary')
     answer_ids = fields.One2many('gradein.answer', 'order_id', string='Answers')
