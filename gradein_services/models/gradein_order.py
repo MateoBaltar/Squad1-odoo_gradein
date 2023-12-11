@@ -15,6 +15,5 @@ class GradeinOrder(models.Model):
     reject_motive_id = fields.Many2one('gradein.reject.motive', string='Reason for rejection')
     price = fields.Float(string='Amount to pay')
     review = fields.Text(string='Evaluation Summary')
-    # answer_ids = fields.One2many('gradein.answer', 'order_id', string='Answers')
-    question_id = fields.Many2one('gradein.question', string='Question')
-    answer_id = fields.Many2one('gradein.answer', string='Answer Given')
+    answer_ids = fields.Many2many('gradein.answer', string='Answers')
+    question_ids = fields.Many2many('gradein.question', string='Questions')
