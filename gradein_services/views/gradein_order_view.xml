@@ -12,12 +12,10 @@
                         <field name="name" />
                     </group>
 
-                    <!-- Campo "Fecha" -->
                     <group>
                         <field name="date" />
                     </group>
 
-                    <!-- Campo "State" -->
                     <group>
                         <field name="state" />
                     </group>
@@ -57,19 +55,14 @@
                         <field name="review" />
                     </group>
 
-                    <!-- Campo "Respuestas" -->
-                    <!-- <group>
-                        <field name="answer_ids" />
-                    </group> -->
-
                     <!-- Campo "Pregunta" -->
                     <group>
-                        <field name="question_id" />
+                        <field name="question_ids" />
                     </group>
 
                     <!-- Campo "Respuesta dada" -->
                     <group>
-                        <field name="answer_id" />
+                        <field name="answer_ids" />
                     </group>
 
                 </form>
