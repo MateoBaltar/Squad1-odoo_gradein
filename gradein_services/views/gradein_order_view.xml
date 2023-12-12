@@ -6,6 +6,7 @@
             <field name="name">gradein.order.form</field>
             <field name="model">gradein.order</field>
             <field name="arch" type="xml">
+            
                 <form>
                     <!-- Campo "Nombre" -->
                     <group>
@@ -71,6 +72,7 @@
                     <group>
                         <field name="answer_id" />
                     </group>
+                    
 
                 </form>
             </field>
@@ -109,6 +111,8 @@
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_gradein_order_tree" />
         </record>
+
+
 
         <menuitem id="menu_gradein_order"
             name="Orders"

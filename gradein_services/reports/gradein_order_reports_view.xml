@@ -1,0 +1,54 @@
+<odoo>
+    <template id="gradein_order_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h2>Grade In Order Report</h2>
+                    <t t-foreach="docs" t-as="o">
+                        <div>
+                            <span t-field="o.name"/>
+                        </div>
+                        <br/>
+
+                        <table class="table table-sm o_main_table">
+                            <thead style="display: table-row-group">
+                                <tr>
+                                    <th class="text-left">Nombre</th>
+                                    <th class="text-left">Fecha</th>
+                                    <th class="text-left">Equipo</th>
+                                    <th class="text-left">Imei</th>
+                                    <th class="text-left">Imagenes</th>
+                                    <th class="text-left">Cliente</th>
+                                    <th class="text-left">Importe a pagar</th>
+                                    <th class="text-left">Resumen de la evaluación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-left"><t t-esc="o.name"/></td>
+                                    <td class="text-left"><t t-esc="o.date"/></td>
+                                    <td class="text-left"><t t-esc="o.equipment_id.name"/></td>
+                                    <td class="text-left"><t t-esc="o.imei"/></td>
+                                    <td class="text-left"><t t-esc="o.image_ids"/></td>
+                                    <td class="text-left"><t t-esc="o.partner_id.name"/></td>
+                                    <td class="text-left"><t t-esc="o.price"/></td>
+                                    <td class="text-left"><t t-esc="o.review"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+    
+    <record id="action_gradein_order_report" model="ir.actions.report">
+        <field name="name">Grade in Order</field>
+        <field name="model">gradein.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">gradein_services.gradein_order_report</field>
+        <field name="binding_model_id" ref="model_gradein_order"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
