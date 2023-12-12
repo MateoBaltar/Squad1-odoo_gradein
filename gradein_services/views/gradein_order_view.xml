@@ -7,62 +7,26 @@
             <field name="model">gradein.order</field>
             <field name="arch" type="xml">
                 <form>
-                    <!-- Campo "Nombre" -->
                     <group>
-                        <field name="name" />
-                    </group>
+                        <group>
+                            <field name="name" />
+                            <field name="date" />
+                            <field name="equipment_id" />
+                            <field name="imei" />
+                            <field name="reject_motive_id" />
+                            <field name="review" />
+                            <field name="image_ids" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" add-label="Add a Image" nolabel="1" />
+                        </group>
 
-                    <group>
-                        <field name="date" />
-                    </group>
-
-                    <group>
-                        <field name="state" />
-                    </group>
-
-                    <!-- Campo "Equipo" -->
-                    <group>
-                        <field name="equipment_id" />
-                    </group>
-
-                    <!-- Campo "Imei" -->
-                    <group>
-                        <field name="imei" />
-                    </group>
-
-                    <!-- Campo "Imagen" -->
-                    <group>
-                        <field name="image_ids" />
-                    </group>
-
-                    <!-- Campo "Cliente" -->
-                    <group>
-                        <field name="partner_id" />
-                    </group>
-
-                    <!-- Campo "Motivo de rechazo" -->
-                    <group>
-                        <field name="reject_motive_id" />
-                    </group>
-
-                    <!-- Campo "Importe a pagar" -->
-                    <group>
-                        <field name="price" />
-                    </group>
-
-                    <!-- Campo "Resumen de la evaluacion" -->
-                    <group>
-                        <field name="review" />
-                    </group>
-
-                    <!-- Campo "Pregunta" -->
-                    <group>
-                        <field name="question_ids" />
-                    </group>
-
-                    <!-- Campo "Respuesta dada" -->
-                    <group>
-                        <field name="answer_ids" />
+                        <group>
+                            <field name="state" />
+                            
+                            <field name="partner_id" />
+                            <field name="price" />
+                            <field name="question_ids" />
+                            <field name="answer_ids" />
+                        </group>
+                    
                     </group>
 
                 </form>
@@ -92,6 +56,40 @@
                     <!-- Campo "Importe a pagar" -->
                     <field name="price" />
                 </tree>
+            </field>
+        </record>
+
+        <!-- SEARCH DE ORDER-->
+        <record id="view_gradein_order_search" model="ir.ui.view">
+            <field name="name">gradein.order.search</field>
+            <field name="model">gradein.order</field>
+            <field name="arch" type="xml">
+                <search>
+                  <!-- Filtro rápido "Nombre" -->
+                    <field name="name"/>
+                   <!-- Filtro rápido "Fecha" -->
+                    <field name="date"/>
+                  <!-- Filtro rápido "IMEI"-->
+                    <field name="imei"/>
+                  <!-- Filtro rápido "Equipment_id" -->
+                    <field name="equipment_id"/>
+                  <!-- Filtro rápido "Reject_motive_id"-->
+                    <field name="reject_motive_id"/>
+
+
+                 <!-- Filtro de estado -->
+                    <filter string="Draft" name="draft" domain="[('state', '=', 'draft')]"/>
+                    <filter string="Confirmed" name="confirmed" domain="[('state', '=', 'confirmed')]"/>
+                    <filter string="Rejected" name="rejected" domain="[('state', '=', 'rejected')]"/>
+
+                    <!-- Agrupar por -->
+                     <group expand="1" string="Group by Equipment">
+                        <filter string="Equipment" name="equipment_id" context="{'group_by': 'equipment_id'}"/>
+                    </group>
+                    <group expand="2" string="Group by Reject Motive">
+                        <filter string="Reject Motive" name="reject_motive_id" context="{'group_by': 'reject_motive_id'}"/>
+                    </group>
+                  </search>
             </field>
         </record>
 
