@@ -96,12 +96,45 @@
                 </tree>
             </field>
         </record>
+        <!-- SEARCH -->
+                <record id="view_gradein_order_search" model="ir.ui.view">
+            <field name="name">gradein.order.search</field>
+            <field name="model">gradein.order</field>
+            <field name="arch" type="xml">
+                <search>
+                  <!-- Filtro rápido "Nombre" -->
+                    <field name="name"/>
+                   <!-- Filtro rápido "Fecha" -->
+                    <field name="date"/>
+                  <!-- Filtro rápido "IMEI"-->
+                    <field name="imei"/>
+                  <!-- Filtro rápido "Equipment_id" -->
+                    <field name="equipment_id"/>
+                  <!-- Filtro rápido "Reject_motive_id"-->
+                    <field name="reject_motive_id"/>
+
+
+                 <!-- Filtro de estado -->
+                    <filter string="Draft" name="draft" domain="[('state', '=', 'draft')]"/>
+                    <filter string="Confirmed" name="confirmed" domain="[('state', '=', 'confirmed')]"/>
+                    <filter string="Rejected" name="rejected" domain="[('state', '=', 'rejected')]"/>
+
+                    <!-- Agrupar por -->
+                     <group expand="1" string="Group by Equipment">
+                        <filter string="Equipment" name="equipment_id" context="{'group_by': 'equipment_id'}"/>
+                    </group>
+                    <group expand="2" string="Group by Reject Motive">
+                        <filter string="Reject Motive" name="reject_motive_id" context="{'group_by': 'reject_motive_id'}"/>
+                    </group>
+                  </search>
+            </field>
+        </record>
 
         <!-- ACTION -->
         <record id="gradein_order_view" model="ir.actions.act_window">
             <field name="name">Gradein Order</field>
             <field name="res_model">gradein.order</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,search</field>
             <field name="view_id" ref="view_gradein_order_tree" />
         </record>
 
