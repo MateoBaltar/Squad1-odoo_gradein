@@ -139,11 +139,5 @@
         </record>
 
 
-
-        <menuitem id="menu_gradein_order"
-            name="Orders"
-            parent="menu_services"
-            action="gradein_order_view" />
-
     </data>
 </odoo>

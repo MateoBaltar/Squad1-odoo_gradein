@@ -68,12 +68,5 @@
             <field name="view_id" ref="view_equipment_type_tree" />
         </record>
 
-        <!-- MENU -->
-        <menuitem id="menu_equipment_type"
-            name="Equipment Types"
-            parent="menu_services_config"
-            action="equipment_type_view"
-            groups="group_admin" />
-            
     </data>
 </odoo>

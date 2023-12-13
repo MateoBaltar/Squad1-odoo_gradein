@@ -9,3 +9,9 @@ class GradeinAnswer(models.Model):
     active = fields.Boolean(string="Active", default=True)
     price_reduction = fields.Float(string="Reduce the price by")
     
+    
+    
+    
+    
+    
+    

@@ -73,12 +73,7 @@
             <field name="view_id" ref="view_gradein_equipment_tree" />
         </record>
 
-        <!-- MENU -->
-        <menuitem id="menu_gradein_equipment"
-            name="Equipment"
-            parent="menu_services_config"
-            action="gradein_equipment_view"
-            groups="group_admin" />
+       
 
     </data>
 </odoo>
