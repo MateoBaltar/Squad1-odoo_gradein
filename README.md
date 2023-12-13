@@ -13,6 +13,8 @@ Gracias por elegir nuestra aplicación para gestionar eficientemente los proceso
 
 ### Proceso de Aceptación
 
+- La app tendra dos tipos de usuarios: Vendedor y administrador. El administrador tendra todos los accesos disponible a todos los modelos, en cambio el vendedor solo
+tendra permisos para crear y editar en las vistas.
 - Pruebas Manuales: Se realizarán pruebas manuales exhaustivas para verificar cada uno de los criterios de aceptación.
 - Revisión del Código: El código asociado de los modelos serán revisado para asegurar buenas prácticas de programación, coherencia y legibilidad.
 - Revisión de Documentación: La documentación asociada al modelo y cualquier instrucción de configuración también será revisada.
@@ -40,7 +42,6 @@ El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de ma
 ### Criterios de Aceptación
 
 - Funcionalidad Básica:
-    - La aplicación debe permitir la creación y edición de los equipos a través del usuario del vendedor.
     - La equipo debe contener un campo de texto (name) que sea obligatorio y única.
     - El estado de activación/desactivación (active) debe reflejarse correctamente en la interfaz y afectar la disponibilidad del equipo.
     - La aplicación debe admitir la carga de imágenes representativas para cada equipo a través del campo image.
@@ -74,7 +75,6 @@ El modelo Gradein Equipment Type es esencial en nuestra aplicación para gestion
 ### Criterios de Aceptación
 
 - Funcionalidad Básica:
-    - La aplicación debe permitir la creación y edición de preguntas a través del usuario del vendedor.
     - La respuesta debe contener un campo de texto (name) que sea obligatorio y único para cada equipo.
     - La aplicación debe admitir la carga de imágenes representativas para cada tipo de equipo a través del campo image.
     - El estado de activación/desactivación (active) debe reflejarse correctamente en la interfaz y afectar la disponibilidad de la respuesta.
@@ -104,14 +104,63 @@ El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de ma
     - Valor predeterminado: True.
 - Price_reduction (Float): Cantidad para reducir el precio.
 
+
 ### Criterios de Aceptación
 
 - Funcionalidad Básica:
-    - La aplicación debe permitir la creación y edición de respuestas a través del usuario del vendedor.
     - La respuesta debe contener un campo de texto (name) que sea obligatorio y única.
     - El estado de activación/desactivación (active) debe reflejarse correctamente en la interfaz y afectar la disponibilidad de la respuesta.
     - El campo price_reduction debe ser editable y permitir valores numéricos.
     - La introducción de un valor en price_reduction debe reflejarse correctamente en la interfaz y en el modelo de datos. 
+
+- Recuperación de Datos: La aplicación debe ser capaz de recuperar y mostrar correctamente las respuestas almacenadas en el modelo Gradein Answer. 
+- Integración con el Modelo de Preguntas: La aplicación debe integrarse correctamente con el modelo de preguntas (gradein.question) y permitir la asociación correcta de respuestas a preguntas.
+
+---
+
+## **Modelo gradein_order**
+
+### Objetivo
+
+El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de manera efectiva las respuestas asociadas al modelo de preguntas. Este modelo está diseñado con campos específicos que son fundamentales para la configuración de la vista y garantizar una experiencia de usuario fluida.
+
+### Estructura del Modelo
+
+![Alt text](image-3.png)
+
+### Campos Principales
+
+- Name (Char): Texto de la respuesta.
+- Date (Date): Fecha de la orden.
+- State(Selection): Estado de la orden
+    - Opciones: 'Draft', 'Confirmed', 'Rejected'.
+    - Valor predeterminado: 'Draft'.
+- Equipment_id (Many2one): Equipo asociado a la orden.
+- Imei (Char): Número IMEI del equipo asociado a la orden.
+- Image_ids (Many2many): Imágenes relacionadas con la orden.
+- Partner_id (Many2one): Cliente asociado a la orden a través del modelo res.partner.
+- Reject_motive_id (Many2one): Motivo de rechazo asociado a la orden.
+- Price (Float): Monto a pagar en la moneda local.
+- Review (Text): Resumen de la evaluación de la orden.
+- Answer_ids (Many2many): Respuestas asociadas a la orden a través del modelo gradein.answer.
+- Question_ids (Many2many): Preguntas asociadas a la orden a través del modelo gradein.question.
+
+### Criterios de Aceptación
+
+- Funcionalidad Básica:
+    - La respuesta debe contener un campo de texto (name) que sea obligatorio y única.
+    - La aplicación debe capturar y mostrar correctamente la fecha de la orden a través del campo date.
+    - El campo state debe permitir la selección entre 'Draft', 'Confirmed' y 'Rejected' para indicar el estado de la orden.
+    - Las órdenes deben iniciar en estado 'Draft' de forma predeterminada.
+    - El campo equipment_id debe permitir la asociación correcta de un equipo a la orden.
+    - El campo imei debe permitir la introducción del número IMEI del equipo asociado a la orden.
+    - El campo image_ids debe permitir la asociación de imágenes relacionadas con la orden.
+    - El campo partner_id debe permitir la asociación de la orden con un cliente a través del modelo res.partner.
+    - El campo reject_motive_id debe permitir la selección de un motivo de rechazo asociado a la orden.
+    - El campo price debe permitir la introducción de un valor numérico representando el monto a pagar en la moneda local.
+    - El campo review debe permitir la introducción de un resumen de la evaluación de la orden.
+    - El campo answer_ids debe permitir la asociación correcta de respuestas a la orden a través del modelo gradein.answer.
+    - El campo question_ids debe permitir la asociación correcta de preguntas a la orden a través del modelo gradein.question.
 
 - Recuperación de Datos: La aplicación debe ser capaz de recuperar y mostrar correctamente las respuestas almacenadas en el modelo Gradein Answer. 
 - Integración con el Modelo de Preguntas: La aplicación debe integrarse correctamente con el modelo de preguntas (gradein.question) y permitir la asociación correcta de respuestas a preguntas.
