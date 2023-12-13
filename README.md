@@ -24,7 +24,7 @@ tendra permisos para crear y editar en las vistas.
 
 ### Objetivo
 
-El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de manera efectiva las respuestas asociadas al modelo de preguntas. Este modelo está diseñado con campos específicos que son fundamentales para la configuración de la vista y garantizar una experiencia de usuario fluida.
+Este documento define los criterios y el proceso de aceptación para garantizar que la implementación del modelo Gradein Equipment cumpla con los requisitos y expectativas del proyecto.
 
 ### Estructura del Modelo
 
@@ -95,7 +95,7 @@ El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de ma
 
 ### Estructura del Modelo
 
-![Alt text](image.png)
+![Alt text](image-5.png)
 
 ### Campos Principales
 
@@ -103,7 +103,6 @@ El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de ma
 - Active (Boolean): Indica si el equipo está activo.
     - Valor predeterminado: True.
 - Price_reduction (Float): Cantidad para reducir el precio.
-
 
 ### Criterios de Aceptación
 
@@ -122,7 +121,7 @@ El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de ma
 
 ### Objetivo
 
-El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de manera efectiva las respuestas asociadas al modelo de preguntas. Este modelo está diseñado con campos específicos que son fundamentales para la configuración de la vista y garantizar una experiencia de usuario fluida.
+Este documento define los criterios y el proceso de aceptación para garantizar que la implementación del modelo Gradein Order cumpla con los requisitos y expectativas del proyecto.
 
 ### Estructura del Modelo
 
@@ -161,9 +160,6 @@ El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de ma
     - El campo review debe permitir la introducción de un resumen de la evaluación de la orden.
     - El campo answer_ids debe permitir la asociación correcta de respuestas a la orden a través del modelo gradein.answer.
     - El campo question_ids debe permitir la asociación correcta de preguntas a la orden a través del modelo gradein.question.
-
-- Recuperación de Datos: La aplicación debe ser capaz de recuperar y mostrar correctamente las respuestas almacenadas en el modelo Gradein Answer. 
-- Integración con el Modelo de Preguntas: La aplicación debe integrarse correctamente con el modelo de preguntas (gradein.question) y permitir la asociación correcta de respuestas a preguntas.
 
 ---
 © Squad 1
