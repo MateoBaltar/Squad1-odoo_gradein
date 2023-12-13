@@ -86,7 +86,31 @@ El modelo Gradein Equipment Type es esencial en nuestra aplicación para gestion
 - Recuperación de Datos: La aplicación debe ser capaz de recuperar y mostrar correctamente las respuestas almacenadas en el modelo Gradein Equipment Type.
 
 ---
+## **Modelo gradein_question**
+### Objetivo
+El modelo Gradein Question es esencial en nuestra aplicación para gestionar de manera efectiva las preguntas que despues van hacer asociadas al modelo de respuestas que van a tener los equipos. Este modelo está diseñado con campos específicos que son fundamentales para la configuración de la vista y garantizar una experiencia de usuario fluida.
 
+### Estructura del Modelo
+![Alt text](image-6.png)
+
+### Campos Principales
+- Name (Char): Texto de la respuesta.
+- Active (Boolean): Indica si el equipo está activo.
+    - Valor predeterminado: True.
+- Equipmente_type_ids (Many2many): Tipos de equipos asociados a la pregunta.
+- Answer_ids (Many2many): Respuestas asociadas a la pregunta.
+
+### Criterios de Aceptación
+- Funcionalidad Básica:
+    - La respuesta debe contener un campo de texto (name) que sea obligatorio y única.
+    - El estado de activación/desactivación (active) debe reflejarse correctamente en la interfaz y afectar la disponibilidad de la pregunta.
+    - El campo equipment_type_ids debe permitir la asociación correcta de tipos de equipos a la pregunta.
+    - El campo answer_ids debe permitir la asociación correcta de respuestas a la pregunta.
+
+- Recuperación de Datos: La aplicación debe ser capaz de recuperar y mostrar correctamente las respuestas almacenadas en el modelo Gradein Question.
+- Integración con el Modelo de Preguntas: La aplicación debe integrarse correctamente con el modelo de respuestas (gradein.answer).
+
+---
 ## **Modelo gradein_answer**
 
 ### Objetivo
