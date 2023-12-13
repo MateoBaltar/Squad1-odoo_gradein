@@ -4,6 +4,56 @@
 
 Gracias por elegir nuestra aplicación para gestionar eficientemente los procesos de canje de celulares. A continuación, encontrarás información útil para comenzar.
 
+## **Modelo gradein_equipment_type**
+
+### Objetivo
+
+El modelo Gradein Equipment Type es esencial en nuestra aplicación para gestionar tipos de equipos. A continuación, se presenta la estructura del modelo junto con una explicación detallada de los campos principales.
+
+### Estructura del Modelo
+
+### aqui va la foto
+
+### Campos Principales
+
+- Name (Char):
+    - Descripción: Nombre del tipo de equipo.
+    - Requerido: Sí.
+- Image (Binary):
+    - Descripción: Cantidad para reducir el precio.
+    - Valor predeterminado: True.
+- Active (Boolean):
+    - Elemento anidado
+- Question_ids (Many2many):
+    - Descripción: Preguntas asociadas al tipo de equipo.
+    - Ayuda: Preguntas que están relacionadas con este tipo de equipo.
+
+### Criterios de Aceptación
+
+- Funcionalidad Básica:
+    - La aplicación debe permitir la creación y edición de preguntas a través del usuario del vendedor.
+    - La respuesta debe contener un campo de texto (name) que sea obligatorio y único para cada equipo.
+    - La aplicación debe admitir la carga de imágenes representativas para cada tipo de equipo a través del campo image.
+    - El estado de activación/desactivación (active) debe reflejarse correctamente en la interfaz y afectar la disponibilidad de la respuesta.
+
+- Asociación con Preguntas:
+    - La relación question_ids debe permitir la asociación correcta de preguntas al tipo de equipo.
+    - La eliminación de un tipo de equipo no debe afectar negativamente a las preguntas asociadas.
+
+- Recuperación de Datos: La aplicación debe ser capaz de recuperar y mostrar correctamente las respuestas almacenadas en el modelo Gradein Equipment Type.
+
+### Proceso de Aceptación
+
+- Pruebas Manuales: Se realizarán pruebas manuales exhaustivas para verificar cada uno de los criterios de aceptación mencionados anteriormente.
+
+- Revisión del Código: El código asociado al modelo Gradein Equipment Type será revisado para asegurar buenas prácticas de programación, coherencia y legibilidad.
+
+- Revisión de Documentación: La documentación asociada al modelo y cualquier instrucción de configuración también será revisada.
+
+- Validación del Usuario Final: Se llevará a cabo una validación final con usuarios finales para garantizar que la aplicación cumple con sus expectativas y necesidades.
+
+---
+
 ## **Modelo gradein_answer**
 
 ### Objetivo
@@ -23,12 +73,10 @@ El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de ma
     - Elemento anidado
 - Price_reduction (Float):
     - Descripción: Cantidad para reducir el precio.
-    - Valor predeterminado: 0.0.
 
 ### Criterios de Aceptación
 
 - Funcionalidad Básica:
-    - La aplicación debe permitir la creación y edición de respuestas a través de la interfaz del vendedor.
     - La respuesta debe contener un campo de texto (name) que sea obligatorio y única.
     - El estado de activación/desactivación (active) debe reflejarse correctamente en la interfaz y afectar la disponibilidad de la respuesta.
 
@@ -37,8 +85,6 @@ El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de ma
     - La introducción de un valor en price_reduction debe reflejarse correctamente en la interfaz y en el modelo de datos. 
 
 - Recuperación de Datos: La aplicación debe ser capaz de recuperar y mostrar correctamente las respuestas almacenadas en el modelo Gradein Answer. 
-
-- Métodos y Lógica Adicional: Los métodos y la lógica adicionales, si se implementan, deben ejecutarse según lo previsto sin errores ni efectos secundarios no deseados. 
 
 - Integración con el Modelo de Preguntas: La aplicación debe integrarse correctamente con el modelo de preguntas (gradein.question) y permitir la asociación correcta de respuestas a preguntas.
 
