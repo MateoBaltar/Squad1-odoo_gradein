@@ -61,13 +61,5 @@
         </record>
             
 
-
-        <!-- MENU -->
-        <menuitem id="menu_gradein_reject_motive"
-            name="Reject Motive"
-            action="gradein_reject_motive_view"
-            parent="menu_services_config"
-            groups="group_admin"/>
-
     </data>
 </odoo>

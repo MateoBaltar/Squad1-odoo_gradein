@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- MENU ORDERS -->
+             <menuitem id="menu_gradein_order"
+            name="Orders"
+            parent="menu_services"
+            action="gradein_order_view" />   
+          <!-- MENU ANSWER -->
+        <menuitem id="menu_gradein_answer"
+            name="Answers"
+            action="gradein_answer_view"
+            parent="menu_services_config"
+            groups="group_admin"/>
+        
+         <!-- MENU EQUIPMENT -->
+        <menuitem id="menu_gradein_equipment"
+            name="Equipment"
+            parent="menu_services_config"
+            action="gradein_equipment_view"
+            groups="group_admin" />
+
+        <!-- MENU EQUIPMENT TYPES -->
+               <menuitem id="menu_equipment_type"
+            name="Equipment Types"
+            parent="menu_services_config"
+            action="equipment_type_view"
+            groups="group_admin" />
+          <!-- MENU REJECT MOTIVE -->
+        <menuitem id="menu_gradein_reject_motive"
+            name="Reject Motive"
+            action="gradein_reject_motive_view"
+            parent="menu_services_config"
+            groups="group_admin"/>
+
+
+        <!-- MENU QUESTIONS -->
+         <menuitem id="menu_gradein_question"
+            name="Questions"
+            parent="menu_services_config"
+            action="gradein_question_view"
+            groups="group_admin" />
+
+
+
+    
+        
+
+    </data>
+</odoo>

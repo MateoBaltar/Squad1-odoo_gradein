@@ -10,3 +10,8 @@ class GradeInEquipment(models.Model):
     description = fields.Text(string="Description")
     active = fields.Boolean(string="Active", default=True)
     price = fields.Float(string="Price")
+    
+    
+    
+    
+    

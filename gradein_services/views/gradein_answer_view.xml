@@ -67,12 +67,7 @@
             
 
 
-        <!-- MENU -->
-        <menuitem id="menu_gradein_answer"
-            name="Answers"
-            action="gradein_answer_view"
-            parent="menu_services_config"
-            groups="group_admin"/>
+
 
     </data>
 </odoo>
