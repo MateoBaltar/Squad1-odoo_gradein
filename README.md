@@ -95,7 +95,7 @@ El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de ma
 
 ### Estructura del Modelo
 
-![Alt text](image-5.png)
+![Alt text](image.png)
 
 ### Campos Principales
 
