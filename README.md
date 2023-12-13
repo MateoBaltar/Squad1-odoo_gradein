@@ -77,7 +77,6 @@ El modelo Gradein Answer es esencial en nuestra aplicación para gestionar de ma
 ### Criterios de Aceptación
 
 - Funcionalidad Básica:
-    - La aplicación debe permitir la creación y edición de respuestas a través del usuario del vendedor.
     - La respuesta debe contener un campo de texto (name) que sea obligatorio y única.
     - El estado de activación/desactivación (active) debe reflejarse correctamente en la interfaz y afectar la disponibilidad de la respuesta.
 
