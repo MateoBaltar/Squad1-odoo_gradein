@@ -1,13 +1,13 @@
 "id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-"access_seller_question","odoo.gradein.vendedor","model_gradein_question","group_seller",1,1,1,0
-"access_admin_question","odoo.gradein.admin","model_gradein_question","group_admin",1,1,1,1
+"access_seller_order","odoo.gradein.order.seller","model_gradein_order","group_seller",1,1,1,0
+"access_admin_order","odoo.gradein.order.admin","model_gradein_order","group_admin",1,1,1,1
 "access_seller_answer","odoo.gradein.vendedor.answer","model_gradein_answer","group_seller",1,1,1,0
 "access_admin_answer","odoo.gradein.admin.answer","model_gradein_answer","group_admin",1,1,1,1
 "access_seller_equipment_type","odoo.gradein.equipment.type.seller","model_gradein_equipment_type","group_seller",1,1,1,0
 "access_admin_equipment_type","odoo.gradein.equipment.type.admin","model_gradein_equipment_type","group_admin",1,1,1,1
-"access_seller_order","odoo.gradein.order.seller","model_gradein_order","group_seller",1,1,1,0
-"access_admin_order","odoo.gradein.order.admin","model_gradein_order","group_admin",1,1,1,1
 "access_seller_equipment","odoo.gradein.equipment.seller","model_gradein_equipment","group_seller",1,1,1,0
 "access_admin_equipment","odoo.gradein.equipment.admin","model_gradein_equipment","group_admin",1,1,1,1
 "access_seller_reject_motive","odoo.gradein.reject.seller","model_gradein_reject_motive","group_seller",1,1,1,0
 "access_admin_reject_motive","odoo.gradein.reject.admin","model_gradein_reject_motive","group_admin",1,1,1,1
+"access_seller_question","odoo.gradein.vendedor","model_gradein_question","group_seller",1,1,1,0
+"access_admin_question","odoo.gradein.admin","model_gradein_question","group_admin",1,1,1,1

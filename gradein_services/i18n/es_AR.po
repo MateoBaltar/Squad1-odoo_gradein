@@ -1,0 +1,385 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* gradein_services
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0-20231130\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-13 22:22+0000\n"
+"PO-Revision-Date: 2023-12-13 22:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_answer__active
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__active
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type__active
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question__active
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_reject_motive__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_view_form
+msgid "Add a Image"
+msgstr "Agregar imagen"
+
+#. module: gradein_services
+#: model:res.groups,name:gradein_services.group_admin
+msgid "Admin (Grade In)"
+msgstr "Administrador (Grade In)"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__price
+msgid "Amount to pay"
+msgstr "Monto a pagar"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__answer_ids
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question__answer_ids
+#: model:ir.ui.menu,name:gradein_services.menu_gradein_answer
+msgid "Answers"
+msgstr "Respuestas"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_answer_search
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_equipment_search
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_equipment_type_search
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_question_search
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_reject_motive_search
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__partner_id
+msgid "Client"
+msgstr "Cliente"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
+msgid "Cliente"
+msgstr ""
+
+#. module: gradein_services
+#: model:ir.ui.menu,name:gradein_services.menu_services_config
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: gradein_services
+#: model:ir.model.fields.selection,name:gradein_services.selection__gradein_order__state__confirmed
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_order_search
+msgid "Confirmed"
+msgstr "Aceptado"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_answer__create_uid
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__create_uid
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type__create_uid
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__create_uid
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question__create_uid
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_reject_motive__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_answer__create_date
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__create_date
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type__create_date
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__create_date
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question__create_date
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_reject_motive__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_answer__display_name
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__display_name
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type__display_name
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__display_name
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question__display_name
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_reject_motive__display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: gradein_services
+#: model:ir.model.fields.selection,name:gradein_services.selection__gradein_order__state__draft
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_order_search
+msgid "Draft"
+msgstr "Pendiente"
+
+#. module: gradein_services
+#: model:ir.actions.act_window,name:gradein_services.gradein_equipment_view
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__equipment_id
+#: model:ir.ui.menu,name:gradein_services.menu_gradein_equipment
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_order_search
+msgid "Equipment"
+msgstr "Equipo"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question__equipment_type_ids
+msgid "Equipment Type"
+msgstr "Tipo de equipo"
+
+#. module: gradein_services
+#: model:ir.actions.act_window,name:gradein_services.equipment_type_view
+#: model:ir.ui.menu,name:gradein_services.menu_equipment_type
+msgid "Equipment Types"
+msgstr "Tipos de equipos"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
+msgid "Equipo"
+msgstr ""
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__review
+msgid "Evaluation Summary"
+msgstr "Resumen de evaluación"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
+msgid "Fecha"
+msgstr ""
+
+#. module: gradein_services
+#: model:ir.model,name:gradein_services.model_gradein_equipment_type
+msgid "Grade In Equipment Type"
+msgstr "Tipo de equipo"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
+msgid "Grade In Order Report"
+msgstr "Informe de orden"
+
+#. module: gradein_services
+#: model:ir.actions.report,name:gradein_services.action_gradein_order_report
+msgid "Grade in Order"
+msgstr "Orden PDF"
+
+#. module: gradein_services
+#: model:ir.model,name:gradein_services.model_gradein_order
+msgid "GradeIn Order"
+msgstr "Orden"
+
+#. module: gradein_services
+#: model:ir.model,name:gradein_services.model_gradein_answer
+msgid "Gradein Answer"
+msgstr "Respuesta"
+
+#. module: gradein_services
+#: model:ir.actions.act_window,name:gradein_services.gradein_answer_view
+msgid "Gradein Answers"
+msgstr "Respuestas"
+
+#. module: gradein_services
+#: model:ir.model,name:gradein_services.model_gradein_equipment
+msgid "Gradein Equipment"
+msgstr "Equipo"
+
+#. module: gradein_services
+#: model:ir.actions.act_window,name:gradein_services.gradein_order_view
+msgid "Gradein Order"
+msgstr "Orden"
+
+#. module: gradein_services
+#: model:ir.model,name:gradein_services.model_gradein_question
+msgid "Gradein Question"
+msgstr "Pregunta"
+
+#. module: gradein_services
+#: model:ir.actions.act_window,name:gradein_services.gradein_question_view
+msgid "Gradein Questions"
+msgstr "Preguntas"
+
+#. module: gradein_services
+#: model:ir.model,name:gradein_services.model_gradein_reject_motive
+msgid "Gradein Reject Motive"
+msgstr "Motivo de rechazo"
+
+#. module: gradein_services
+#: model:ir.actions.act_window,name:gradein_services.gradein_reject_motive_view
+msgid "Gradein Reject Motives"
+msgstr "Motivos de rechazo"
+
+#. module: gradein_services
+#: model:ir.model,name:gradein_services.model_report_gradein_services_gradein_order_report
+msgid "Gradein Service Report"
+msgstr "Informe de servicio"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_order_search
+msgid "Group by Equipment"
+msgstr "Agrupar por equipo"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_order_search
+msgid "Group by Reject Motive"
+msgstr "Agrupar por motivo de rechazo"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_answer__id
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__id
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type__id
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__id
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question__id
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_reject_motive__id
+msgid "ID"
+msgstr "ID"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__imei
+msgid "IMEI"
+msgstr "IMEI"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__image
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type__image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
+msgid "Imagenes"
+msgstr "Imágenes"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__image_ids
+msgid "Images"
+msgstr "Imágenes"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
+msgid "Imei"
+msgstr "Imei"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
+msgid "Importe a pagar"
+msgstr ""
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_answer____last_update
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment____last_update
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type____last_update
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order____last_update
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question____last_update
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_reject_motive____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacíon el"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_answer__write_uid
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__write_uid
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type__write_uid
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__write_uid
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question__write_uid
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_reject_motive__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualizacion por"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_answer__write_date
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__write_date
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type__write_date
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__write_date
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question__write_date
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_reject_motive__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion por"
+
+#. module: gradein_services
+#: model:ir.actions.act_window,name:gradein_services.action_menu_services
+msgid "Menu Services"
+msgstr "Menu Servicios"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_answer__name
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__name
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type__name
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__name
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_question__name
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_reject_motive__name
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_answer_view_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
+msgid "Nombre"
+msgstr ""
+
+#. module: gradein_services
+#: model:ir.ui.menu,name:gradein_services.menu_gradein_order
+msgid "Orders"
+msgstr "Ordenes"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment__price
+msgid "Price"
+msgstr "Precio"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_equipment_type__question_ids
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__question_ids
+#: model:ir.ui.menu,name:gradein_services.menu_gradein_question
+msgid "Questions"
+msgstr "Pregunta"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__reject_motive_id
+msgid "Reason for rejection"
+msgstr "Motivo de rechazo"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_answer__price_reduction
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_answer_view_form
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_answer_view_tree
+msgid "Reduce the price by"
+msgstr "Reduce el precio en"
+
+#. module: gradein_services
+#: model:ir.ui.menu,name:gradein_services.menu_gradein_reject_motive
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_order_search
+msgid "Reject Motive"
+msgstr "Motivo de rechazo"
+
+#. module: gradein_services
+#: model:ir.model.fields.selection,name:gradein_services.selection__gradein_order__state__rejected
+#: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_order_search
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: gradein_services
+#: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
+msgid "Resumen de la evaluación"
+msgstr ""
+
+#. module: gradein_services
+#: model:res.groups,name:gradein_services.group_seller
+msgid "Seller (Grade In)"
+msgstr "Vendedor (Grade In)"
+
+#. module: gradein_services
+#: model:ir.ui.menu,name:gradein_services.menu_services
+msgid "Services"
+msgstr "Servicios"
+
+#. module: gradein_services
+#: model:ir.model.fields,field_description:gradein_services.field_gradein_order__state
+msgid "Status"
+msgstr "Estado"

@@ -73,15 +73,5 @@
             <field name="view_id" ref="view_gradein_question_tree" />
         </record>
 
-
-        <!-- MENU -->
-        <menuitem id="menu_gradein_question"
-            name="Questions"
-            parent="menu_services_config"
-            action="gradein_question_view"
-            groups="group_admin" />
-
-
-
     </data>
 </odoo>

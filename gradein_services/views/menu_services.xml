@@ -9,17 +9,16 @@
             <field name="view_mode">tree</field>
             <field name="view_id" ref="view_gradein_order_tree" />
         </record>
-
-        <!-- Menú de Servicios -->
+            <!-- Menú de Servicios -->
         <menuitem id="menu_services"
             name="Services"
-            action="action_menu_services" />
+            action="gradein_order_view" />
 
         <menuitem id="menu_services_config"
             name="Configuration"
             parent="menu_services"
             groups="group_admin" />
-        
+    
 
     </data>
 </odoo>
