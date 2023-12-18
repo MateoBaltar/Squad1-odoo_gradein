@@ -11,3 +11,5 @@
 "access_admin_reject_motive","odoo.gradein.reject.admin","model_gradein_reject_motive","group_admin",1,1,1,1
 "access_seller_question","odoo.gradein.vendedor","model_gradein_question","group_seller",1,1,1,0
 "access_admin_question","odoo.gradein.admin","model_gradein_question","group_admin",1,1,1,1
+"access_seller_image","odoo.gradein.image.seller","model_gradein_order_image","group_seller",1,1,1,1
+"access_admin_image","odoo.gradein.image.admin","model_gradein_order_image","group_admin",1,1,1,1
