@@ -2,7 +2,7 @@
     "name": "Odoo Gradein",
     "version": "1.0",
     "author": "Alkemy",
-    "depends": ["base"],
+    "depends": ["base", "web"],
     "installable": True,
     "application": True,
     "data": [
@@ -15,6 +15,12 @@
         'views/gradein_equipment_view.xml',
         'views/gradein_reject_motive_view.xml',
         'views/gradein_order_view.xml',
-        'views/menu_services.xml',
-    ]
+        'views/gradein_orders_image_views.xml',
+        'views/menu_services.xml',  
+    ],
+    "assets": {
+        "web.assets_backend": [
+            "gradein_services/static/src/css/gradein_services.css",
+        ],
+    },
 }
