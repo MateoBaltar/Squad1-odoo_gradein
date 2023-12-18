@@ -17,5 +17,8 @@
         'views/gradein_reject_motive_view.xml',
         'views/gradein_question_view.xml',
         'views/menu_items.xml'
-    ]
+    ],
+    'images': [
+        'static/description/icon.png',
+    ],
 }
