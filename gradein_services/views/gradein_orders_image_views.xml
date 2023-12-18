@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM -->
+        <record id="gradein_orders_image_view_form" model="ir.ui.view">
+            <field name="name">GradeIn Orders Image</field>
+            <field name="model">gradein.order.image</field>
+            <field name="arch" type="xml">
+                <form string="GradeIn Orders Image">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="image_1920"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE -->
+        <record id="gradein_orders_image_view_tree" model="ir.ui.view">
+            <field name="name">GradeIn Orders Image</field>
+            <field name="model">gradein.order.image</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_gradein_image_orders" model="ir.actions.act_window">
+            <field name="name">GradeIn Orders Image</field>
+            <field name="res_model">gradein.order.image</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="gradein_orders_image_view_tree"/>
+        </record>
+
+    </data>
+</odoo>

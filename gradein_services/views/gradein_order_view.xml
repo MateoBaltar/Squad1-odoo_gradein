@@ -6,31 +6,36 @@
             <field name="name">gradein.order.form</field>
             <field name="model">gradein.order</field>
             <field name="arch" type="xml">
-            
-                <form>
-                    <group>
-                        <group>
-                            <field name="name" />
-                            <field name="date" />
-                            <field name="equipment_id" />
-                            <field name="imei" />
-                            <field name="reject_motive_id" />
-                            <field name="review" />
-                            <field name="image_ids" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" add-label="Add a Image" nolabel="1" />
-                        </group>
+                <form string="GradeIn Orders">
+                    <header>
+                        <field name="state" widget="statusbar" options="{'clickable': True}"/>
+                    </header>
 
+                    <sheet style="background-color: none">
                         <group>
-                            <field name="state" />
-                            
-                            <field name="partner_id" />
-                            <field name="price" />
-                            <field name="question_ids" />
-                            <field name="answer_ids" />
+                            <group>
+                                <field name="name"/>
+                                <field name="equipment_id"/>
+                                <field name="imei"/>
+                                <field name="reject_motive_id"/>
+                                <field name="price"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <field name="partner_id"/>
+                                <field name="question_ids"/>
+                                <field name="answer_ids"/>
+                            </group>
                         </group>
-                    
-                    </group>
-                    
-
+                        <group>
+                            <group>
+                                <field name="review"/>
+                            </group>
+                            <group>
+                                <field name="image_ids" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" add-label="Add a Image" nolabel="1"/>
+                            </group>
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>
