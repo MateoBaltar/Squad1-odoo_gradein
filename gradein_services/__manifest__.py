@@ -18,9 +18,4 @@
         'views/gradein_orders_image_views.xml',
         'views/menu_services.xml',  
     ],
-    "assets": {
-        "web.assets_backend": [
-            "gradein_services/static/src/css/gradein_services.css",
-        ],
-    },
 }

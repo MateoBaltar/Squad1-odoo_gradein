@@ -8,27 +8,28 @@
             <field name="arch" type="xml">
                 <form string="GradeIn Orders">
                     <header>
-                        <field name="state" widget="statusbar"/>
+                        <field name="state" widget="statusbar" options="{'clickable': True}"/>
                     </header>
+
                     <sheet style="background-color: none">
                         <group>
                             <group>
-                                <field name="name" class="myclass_css"/>
-                                <field name="equipment_id" class="selector"/>
-                                <field name="imei" class="myclass_css"/>
-                                <field name="reject_motive_id" class="selector"/>
-                                <field name="price" class="myclass_css"/>
+                                <field name="name"/>
+                                <field name="equipment_id"/>
+                                <field name="imei"/>
+                                <field name="reject_motive_id"/>
+                                <field name="price"/>
                             </group>
                             <group>
-                                <field name="date" class="selector"/>
-                                <field name="partner_id" class="selector"/>
-                                <field name="question_ids" class="selector"/>
-                                <field name="answer_ids" class="selector"/>
+                                <field name="date"/>
+                                <field name="partner_id"/>
+                                <field name="question_ids"/>
+                                <field name="answer_ids"/>
                             </group>
                         </group>
                         <group>
                             <group>
-                                <field name="review" class="myclass_css"/>
+                                <field name="review"/>
                             </group>
                             <group>
                                 <field name="image_ids" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" add-label="Add a Image" nolabel="1"/>

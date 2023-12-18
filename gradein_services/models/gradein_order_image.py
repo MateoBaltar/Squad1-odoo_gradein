@@ -11,5 +11,4 @@ class GradeInOrderImage(models.Model):
     name = fields.Char("Name", required=True)
     sequence = fields.Integer(default=1)
     image_1920 = fields.Image(required=True)
-    grade_order_id = fields.Many2one(
-        'gradein.order', "GradeIn Order", ondelete='cascade')
+    grade_order_id = fields.Many2one('gradein.order', "GradeIn Order", ondelete='cascade')
