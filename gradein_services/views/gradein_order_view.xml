@@ -11,7 +11,7 @@
                         <field name="state" widget="statusbar" options="{'clickable': True}"/>
                     </header>
 
-                    <sheet style="background-color: none">
+                    <sheet>
                         <group>
                             <group>
                                 <field name="name"/>

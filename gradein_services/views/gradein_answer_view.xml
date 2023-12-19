@@ -7,21 +7,18 @@
             <field name="name">gradein.answer.form</field>
             <field name="model">gradein.answer</field>
             <field name="arch" type="xml">
-                <form>
-                    <!-- Campo "Name" -->
-                    <group>
-                        <field name="name" string="Name" />
-                    </group>
-                    <!-- Campo "Activa" -->
-                    <group>
-                        <field name="active" />
-                    </group>
-
-                    <!-- Campo "price_reduction" -->
-                    <group>
-                        <field name="price_reduction" string="Reduce the price by"/>
-                    </group>
- 
+               <form>
+                    <sheet> 
+                        <group>
+                            <field name="name" string="Name" />
+                        </group>
+                        <group>
+                             <field name="price_reduction" string="Reduce the price by"/>
+                        </group>
+                        <group>
+                            <field name="active" />
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>

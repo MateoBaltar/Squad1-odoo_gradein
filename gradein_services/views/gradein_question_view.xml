@@ -8,26 +8,20 @@
             <field name="model">gradein.question</field>
             <field name="arch" type="xml">
                 <form>
-                    <!-- Campo "Nombre" -->
-                    <group>
-                        <field name="name" />
-                    </group>
-
-                    <!-- Campo "Activa" -->
-                    <group>
-                        <field name="active" />
-                    </group>
-
-                    <!-- Campo "Tipos de equipos" -->
-                    <group>
-                        <field name="equipment_type_ids" />
-                    </group>
-
-                    <!-- Campo "Respuestas posibles" -->
-                    <group>
-                        <field name="answer_ids" widget="many2many_tags" />
-                    </group> 
-
+                    <sheet>    
+                            <group>
+                                <field name="name" />
+                            </group>
+                            <group>
+                                <field name="equipment_type_ids"  widget="many2many_tags"/>
+                            </group>
+                            <group>
+                                <field name="answer_ids" widget="many2many_tags" />
+                            </group>
+                            <group>
+                                <field name="active" />
+                            </group> 
+                    </sheet>
                 </form>
             </field>
         </record>
